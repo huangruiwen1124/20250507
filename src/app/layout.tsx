@@ -1,3 +1,5 @@
+import '../lib/polyfills'; // 确保这是文件的第一个导入
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";

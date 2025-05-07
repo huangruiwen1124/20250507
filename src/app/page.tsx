@@ -1,4 +1,5 @@
 import PDFRotator from '@/components/PDFRotator'
+import '../lib/polyfills'; // 确保这是文件的第一个导入
 
 export default function Home() {
   return (
