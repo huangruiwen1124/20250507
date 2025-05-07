@@ -4,7 +4,7 @@ import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { Document, Page } from 'react-pdf'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
-import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs';
+import * as pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs';
 import { PDFDocument, degrees } from 'pdf-lib'
 
 // 添加自定义CSS样式
