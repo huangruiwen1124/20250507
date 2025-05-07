@@ -1,21 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	webpack: (config) => {
-		config.resolve.alias.canvas = false;
-		config.module.rules.push({
-			test: /pdf\.worker\.(min\.)?js/,
-			type: 'asset/resource',
-			generator: {
-				filename: 'static/worker/[hash][ext][query]',
-			},
-		});
-		return config;
-	},
-	experimental: {
-		turbo: {
-			enabled: false,
-		},
-	},
+	// 将 experimental.turbo.enabled 改为 turbopack
+	// 从:
+	// experimental: {
+	//   turbo: {
+	//     enabled: true
+	//   }
+	// }
+
+	// 改为:
+	turbopack: true,
+
+	// 保留其他配置...
 };
 
 module.exports = nextConfig;
